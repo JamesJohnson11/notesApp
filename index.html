@@ -21,6 +21,10 @@
   var textElement = document.getElementById("note");
 
   function saveNote() {
-    
-  }
+    if (textElement.value == "") {
+      return alert(
+        "Note is empty. Please enter a note you would like to save."
+      );
+    }
+  };
 </script>
