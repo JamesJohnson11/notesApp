@@ -23,7 +23,7 @@ function getExistingNotes() {
 
 function getNoteId() {
     let noteObject = getExistingNotes()
-    if (!NoteObject) {
+    if (!noteObject) {
         return 1
     }
 }
