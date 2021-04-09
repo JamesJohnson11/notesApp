@@ -10,3 +10,11 @@ function clearForm() {
     document.getElementById("note").value=""
 }
 
+// Get notes that exist in localStorage currently
+function getExistingNotes() {
+    let notes = localStorage.getItem('notes')
+    if (!notes) {
+        return null
+    }
+    return JSON.parse(notes)
+}
