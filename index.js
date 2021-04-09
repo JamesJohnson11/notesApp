@@ -18,3 +18,12 @@ function getExistingNotes() {
     }
     return JSON.parse(notes)
 }
+
+//
+
+function getNoteId() {
+    let noteObject = getExistingNotes()
+    if (!NoteObject) {
+        return 1
+    }
+}
