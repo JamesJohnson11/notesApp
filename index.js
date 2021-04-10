@@ -5,7 +5,7 @@ function deleteAllNotes() {
 }
 
 
-// Clear form after submission
+// Clear note form after submission
 function clearForm() {
     document.getElementById("note").value=""
 }
