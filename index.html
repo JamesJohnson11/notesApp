@@ -23,9 +23,22 @@ var textElement = document.getElementById("note")
 function saveNote() {
     if (textElement.value=="") {
         alert("You are unable to save blank notes. Please input a note and try again.")
+    } else {
+        const id = getNoteId()
+        let noteObject = getExistingNotes()
+
+
+        // If no note objects exist, create a new note object
+        if (!noteObject) {
+            noteObject = {}
+        }
+        noteObject[id] = textElement.value
+        localStorage.setItem('notes', JSON.stringify(noteObject))
+        alert("Your note has been saved!")
+        console.log(localStorage)
+        clearForm()
     }
+
     
-    alert("Your note has been saved!")
-    clearForm()
 }
 </script>
