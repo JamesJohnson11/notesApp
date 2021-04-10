@@ -2,7 +2,7 @@
 function deleteAllNotes() {
     alert("All notes have been deleted! Click 'Back' to create new notes." )
     localStorage.clear()
-    console.log(localStorage)
+    location.reload()
 }
 
 
