@@ -2,6 +2,7 @@
 function deleteAllNotes() {
     alert("All notes have been deleted! Click 'Back' to create new notes." )
     localStorage.clear()
+    console.log(localStorage)
 }
 
 
@@ -19,11 +20,16 @@ function getExistingNotes() {
     return JSON.parse(notes)
 }
 
-//
+// Sets the ID for each note in the note array
 
-function getNoteId() {
+function retrieveNoteId() {
     let noteObject = getExistingNotes()
     if (!noteObject) {
         return 1
     }
+
+    const keysArray = Object.keys(noteObject)
+    const numberKeys = keysArray.map((key) => Number(key))
+    console.log(numberKeys)
+    return numberKeys.length + 1
 }

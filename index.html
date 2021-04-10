@@ -24,9 +24,8 @@ function saveNote() {
     if (textElement.value=="") {
         alert("You are unable to save blank notes. Please input a note and try again.")
     } else {
-        const id = getNoteId()
+        const id = retrieveNoteId()
         let noteObject = getExistingNotes()
-
 
         // If no note objects exist, create a new note object
         if (!noteObject) {
