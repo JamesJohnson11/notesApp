@@ -20,8 +20,8 @@ function getExistingNotes() {
     return JSON.parse(notes)
 }
 
-// Sets the ID for each note in the note array
 
+// Sets the ID for each note in the note array
 function retrieveNoteId() {
     let noteObject = getExistingNotes()
     if (!noteObject) {
@@ -32,4 +32,12 @@ function retrieveNoteId() {
     const numberKeys = keysArray.map((key) => Number(key))
     console.log(numberKeys)
     return numberKeys.length + 1
+}
+
+
+// Displays message on the notes page telling user there are no notes
+function noNotesMessage() {
+    const message = document.createElement('h3')
+    message.innerHTML = "No notes to display! Click the 'Back' button to add new notes."
+    document.body.append(message)
 }
