@@ -17,5 +17,14 @@
 
 
 <script>
- 
+    (function displayNotes() {
+        let notes = getExistingNotes()
+        let notesArray = Object.values(notes)
+        let orderedlist = document.getElementById("notes-list")
+        for (let i = 1; i <= notesArray.length; i++) {
+            let listItem = document.createElement("li")
+            listItem.innerHTML = notes[i]
+            orderedlist.appendChild(listItem)
+        }
+    })()
 </script>
